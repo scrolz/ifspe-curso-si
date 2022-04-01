@@ -1,0 +1,11 @@
+CREATE database IF NOT EXISTS empresa;
+
+CREATE TABLE funcionarios(
+	CPF BIGINT NOT NULL,
+    nome VARCHAR(45) NOT NULL,
+    endereco VARCHAR(45) NOT NULL,
+    telefone BIGINT NOT NULL,
+    salario DECIMAL(10,0) NOT NULL,
+    funcao VARCHAR(45) NOT NULL,
+	CONSTRAINT pk_CPF PRIMARY KEY(CPF)
+);
