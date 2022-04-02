@@ -1,4 +1,0 @@
-[submodule "Algoritmos"]
-	path = Algoritmos
-	url = git@github.com:scrolz/ifspe-si.git
-	ignore = dirty
