@@ -1,5 +1,0 @@
-Comandos como CREATE DATABASE, CREATE TABLE, ALTER TABLE E DROP TABLE pertencem à linguagem DDL (Data Definition Language) que tem como função definir a estrutura do banco de dados.
-
-Comandos como INSERT INTO, UPDATE, DELETE e TRUNCATE percentem à linguagem DML (Data Manipulation Language) que tem como função manipular os dados de um banco de dados.
-
-A Linguagem DDL tem como função definir a estrutura de um banco de dados, já a linguagem DML tem como função manipular os dados de um banco de dados.
