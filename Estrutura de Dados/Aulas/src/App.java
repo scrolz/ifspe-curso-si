@@ -16,7 +16,13 @@ public class App {
 		System.out.println(vetor);
 		System.out.println("Buscando o valor da pos[2]: " + vetor.busca(2));
 		
-		System.out.println("Buscando elemento: " + vetor.verifica("Mirage"));
+		//System.out.println("Buscando elemento: " + vetor.verifica("Mirage"));
+		
+		if(vetor.verifica("Miragem")) {
+			System.out.println("Valor Encontrado!");
+		}else {
+			System.out.println("Valor não encontrador!");
+		}
 		
 	}
 
