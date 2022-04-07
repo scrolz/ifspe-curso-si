@@ -13,7 +13,10 @@ public class App {
 		
 		System.out.println("Tamanho: " + vetor.getTamanho2());
 		
-		System.out.print(vetor.imprime());
+		System.out.println(vetor);
+		System.out.println("Buscando o valor da pos[2]: " + vetor.busca(2));
+		
+		System.out.println("Buscando elemento: " + vetor.verifica("Mirage"));
 		
 	}
 

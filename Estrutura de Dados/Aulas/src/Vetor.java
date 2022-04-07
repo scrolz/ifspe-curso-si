@@ -25,7 +25,7 @@ public class Vetor {
 		return false;
 	}
 	
-	//Aula 03
+	//Aula 03/04
 	public int getTamanho() {
 		return this.tamanho;
 	}
@@ -43,15 +43,41 @@ public class Vetor {
 		return contador;
 	}
 	
-	public String imprime() {
-		String s = "[";
+	public String toString() {
+		StringBuilder s = new StringBuilder();
+		s.append("[");
 		for(int i = 0; i < this.tamanho-1; i++) {
-			s += this.elementos[i] + ", ";
+			s.append(this.elementos[i]);
+			s.append(", ");
 		}
 		if(this.tamanho > 0) {
-			s += this.elementos[this.tamanho-1];
+			s.append(this.elementos[this.tamanho-1]);
 		}
-		s += "]";
+		s.append("]");
 		return s.toString();
+	}
+	
+	//Aula 04
+	public String busca(int posicao) {
+		/*if (! (posicao >= 0) && (posicao < this.tamanho)) {
+			throw new IllegalArgumentException("Posição Inválida!");
+		}else {
+			return this.elementos[posicao];
+		}*/
+		
+		try {
+			return this.elementos[posicao];
+		} catch(Exception e) {
+			return "Posicação inválida do vetor!";
+		}
+	}
+	
+	public boolean verifica(String elemento) {
+		for(int i = 0; i < this.tamanho; i++) {
+			if(this.elementos[i].equalsIgnoreCase(elemento)) {
+				return true;
+			}
+		}
+		return false;
 	}
 }
