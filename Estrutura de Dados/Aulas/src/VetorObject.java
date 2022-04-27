@@ -1,14 +1,14 @@
-public class Vetor {
-	private String[] elementos;
+
+public class VetorObject {
+	private Object[] elementos;
 	private int tamanho;
-	
-	//Aula 02
-	public Vetor(int capacidade) {
-		this.elementos = new String[capacidade];
+
+	public VetorObject(int capacidade) {
+		this.elementos = new Object[capacidade];
 		this.tamanho = 0;
 	}
 	/*
-	public void adiciona(String elemento) {
+	public void adiciona(Object elemento) {
 		for(int i = 0; i <this.elementos.length; i++) {
 			if(this.elementos[i] == null) {
 				this.elementos[i] = elemento;
@@ -16,7 +16,7 @@ public class Vetor {
 			}
 		}
 	}*/
-	public void adiciona(String elemento) {
+	public void adiciona(Object elemento) {
 		if(this.tamanho < this.elementos.length) {
 			this.elementos[this.tamanho] = elemento;
 			
@@ -60,7 +60,7 @@ public class Vetor {
 	}
 	
 	//Aula 04
-	public String busca(int posicao) {
+	public Object busca(int posicao) {
 		/*if (! (posicao >= 0) && (posicao < this.tamanho)) {
 			throw new IllegalArgumentException("Posição Inválida!");
 		}else {
@@ -74,25 +74,25 @@ public class Vetor {
 		}
 	}
 	
-	public boolean verifica(String elemento) {
+	public boolean verifica(Object elemento) {
 		for(int i = 0; i < this.tamanho; i++) {
-			if(this.elementos[i].equalsIgnoreCase(elemento)) {
+			if(this.elementos[i].equals(elemento)) {
 				return true;
 			}
 		}
 		return false;
 	}
 	
-	public int verificaPosicao(String elemento) {
+	public int verificaPosicao(Object elemento) {
 		for(int i = 0; i < this.tamanho; i++) {
-			if(this.elementos[i].equalsIgnoreCase(elemento)) {
+			if(this.elementos[i].equals(elemento)) {
 				return i;
 			}
 		}
 		return -1;
 	}
 	//Aula 05
-	public boolean adicionaPosicao(int posicao, String elemento) {
+	public boolean adicionaPosicao(int posicao, Object elemento) {
 		
 		if(!((posicao >= 0) && (posicao <= this.tamanho))) {
 			throw new IllegalArgumentException("Posição Inválida!");
@@ -114,7 +114,7 @@ public class Vetor {
 	//Aula 06
 	public void aumentaCapacidade() {
 		if(this.tamanho == this.elementos.length) {
-			String[] elementosNovos = new String[this.elementos.length * 2];
+			Object[] elementosNovos = new Object[this.elementos.length * 2];
 			
 			for(int i = 0; i < this.elementos.length; i++) {
 				elementosNovos[i] = this.elementos[i];
@@ -124,7 +124,7 @@ public class Vetor {
 	}
 	
 	//Aula 07
-	public void removerelemento(String elemento) {
+	public void removerelemento(Object elemento) {
 		int posicao = this.verificaPosicao(elemento);
 		
 		if(posicao > -1) {
